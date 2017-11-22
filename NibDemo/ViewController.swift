@@ -12,12 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // choose blue view from xib.
+        let testView = Bundle.main.loadNibNamed("MyView", owner: nil, options: nil)?[0] as! UIView
+        // choose green view from xib.
+//        let testView = Bundle.main.loadNibNamed("MyView", owner: nil, options: nil)?[1] as! UIView
+        view.addSubview(testView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
